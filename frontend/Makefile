@@ -1,14 +1,17 @@
 install:
-	yarn
+	@yarn
 	@make shopify/login
 	@make shopify/connect
 	@make shopify/serve
 
 dev:
-	yarn dev
+	@yarn dev
 
 build:
-	yarn build
+	@yarn build
+
+start:
+	@yarn start
 
 shopify/login:
 	@shopify login

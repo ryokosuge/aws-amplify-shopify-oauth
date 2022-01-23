@@ -7,8 +7,8 @@
     "config": {
       "SourceDir": "frontend/src",
       "DistributionDir": "frontend/.next",
-      "BuildCommand": "npm run-script build",
-      "StartCommand": "npm run-script start"
+      "BuildCommand": "make frontend/build",
+      "StartCommand": "make frontend/start"
     }
   },
   "providers": [
