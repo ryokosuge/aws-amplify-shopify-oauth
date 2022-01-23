@@ -5,6 +5,8 @@ backend:
       commands:
         - '# Use node v17'
         - nvm use ${VERSION_NODE_17}
+        - '# Update Amplify CLI'
+        - npm i -g @aws-amplify/cli --latest --unsafe-perm=true
     build:
       commands:
         - '# Execute Amplify CLI with the helper script'
