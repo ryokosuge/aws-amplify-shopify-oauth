@@ -3,8 +3,8 @@ backend:
   phases:
     preBuild:
       commands:
-        - 'echo $PATH'
         - echo $PATH
+        - nvm list
         - 'Node version'
         - node -v
         - 'Which node'
@@ -15,6 +15,10 @@ backend:
         - which amplify
         - '# Use node v17'
         - nvm use ${VERSION_NODE_17}
+        - '# Alias default node v17'
+        - nvm alias default ${VERSION_NODE_17}
+        - 'Node version'
+        - node -v
         - '# Update Amplify CLI'
         - npm i -g @aws-amplify/cli --latest --unsafe-perm=true
     build:
