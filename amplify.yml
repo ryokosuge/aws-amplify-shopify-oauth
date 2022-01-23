@@ -3,6 +3,7 @@ backend:
   phases:
     preBuild:
       commands:
+        - ~/.nvm/nvm.sh
         - echo $PATH
         - nvm list
         - 'Node version'
