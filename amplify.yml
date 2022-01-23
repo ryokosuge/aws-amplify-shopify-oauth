@@ -6,6 +6,7 @@ backend:
         - nvm install ${VERSION_NODE_17} --reinstall-packages-from=current --latest-npm
         - nvm use ${VERSION_NODE_17}
         - nvm alias default ${VERSION_NODE_17}
+        - npm i -g @aws-amplify/cli --latest --unsafe-perm=true
     build:
       commands:
         - '# Execute Amplify CLI with the helper script'
