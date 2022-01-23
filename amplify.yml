@@ -3,6 +3,16 @@ backend:
   phases:
     preBuild:
       commands:
+        - 'echo $PATH'
+        - echo $PATH
+        - 'Node version'
+        - node -v
+        - 'Which node'
+        - which node
+        - 'Which nvm'
+        - which nvm
+        - 'Which amplify'
+        - which amplify
         - '# Use node v17'
         - nvm use ${VERSION_NODE_17}
         - '# Update Amplify CLI'
