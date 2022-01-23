@@ -3,17 +3,9 @@ backend:
   phases:
     preBuild:
       commands:
-        - echo $PATH
-        - nvm list
         - nvm install ${VERSION_NODE_17} --reinstall-packages-from=current --latest-npm
-        - node -v
-        - which node
-        - which nvm
-        - which amplify
         - nvm use ${VERSION_NODE_17}
         - nvm alias default ${VERSION_NODE_17}
-        - node -v
-        - npm i -g @aws-amplify/cli --latest --unsafe-perm=true
     build:
       commands:
         - '# Execute Amplify CLI with the helper script'
