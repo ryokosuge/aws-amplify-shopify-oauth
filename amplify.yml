@@ -6,6 +6,7 @@ backend:
         - echo $PATH
         - nvm list
         - 'Node version'
+        - nvm install ${VERSION_NODE_17} --reinstall-packages-from=current --latest-npm
         - node -v
         - 'Which node'
         - which node
