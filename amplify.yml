@@ -3,10 +3,6 @@ backend:
   phases:
     preBuild:
       commands:
-        - ls -la .
-        - npm config get prefix
-        - echo $PATH
-        - npm list -g
         - nvm install $VERSION_NODE_17 --reinstall-packages-from=current
         - nvm use $VERSION_NODE_17
         - npm list -g
