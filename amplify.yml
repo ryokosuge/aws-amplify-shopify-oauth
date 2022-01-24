@@ -5,10 +5,10 @@ backend:
       commands:
         - nvm install $VERSION_NODE_17
         - nvm use $VERSION_NODE_17
-        - npm list -g
         - node -v
         - npm i -g npm --latest
-        - npm i -g npm @aws-amplify/cli --latest --legacy-peer-deps
+        - npm list -g
+        - sudo npm i -g @aws-amplify/cli --latest
         - npm list -g
     build:
       commands:
