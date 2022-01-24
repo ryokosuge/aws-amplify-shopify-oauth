@@ -3,7 +3,7 @@ backend:
   phases:
     preBuild:
       commands:
-        - echo $PATH
+        - npm i -g core-js@latest
         - node -v
         - npm -v
         - nvm install $VERSION_NODE_16
