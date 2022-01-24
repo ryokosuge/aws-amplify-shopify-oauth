@@ -10,7 +10,7 @@ backend:
         - node -v
         - npm -v
         - npm i -g npm --latest
-        - npm i -g @aws-amplify/cli --force --unsafe-perm=true
+        - npm i -g @aws-amplify/cli --legacy-peer-deps --unsafe-perm=true
         - npm list -g
     build:
       commands:
