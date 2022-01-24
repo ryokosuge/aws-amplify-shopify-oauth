@@ -3,12 +3,16 @@ backend:
   phases:
     preBuild:
       commands:
+        - echo $PATH
+        - sh -e "echo $PATH"
         - node -v
         - npm -v
         - nvm install $VERSION_NODE_16
         - nvm use $VERSION_NODE_16
+        - nvm alias default $VERSION_NODE_16
         - node -v
         - npm -v
+        - sh -e "echo $PATH"
         - npm i -g npm --latest
         - npm i -g @aws-amplify/cli --legacy-peer-deps --unsafe-perm=true
         - npm list -g
