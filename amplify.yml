@@ -3,12 +3,13 @@ backend:
   phases:
     preBuild:
       commands:
+        - cat ./amplify.sh
         - nvm install $VERSION_NODE_17
         - nvm use $VERSION_NODE_17
         - node -v
         - npm i -g npm --latest
         - npm list -g
-        - sudo npm i -g @aws-amplify/cli --latest
+        - npm i -g @aws-amplify/cli --latest
         - npm list -g
     build:
       commands:
