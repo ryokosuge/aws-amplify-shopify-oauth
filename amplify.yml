@@ -5,12 +5,12 @@ backend:
       commands:
         - node -v
         - npm -v
-        - npm list -g --depth 1
-        - nvm install $VERSION_NODE_17
-        - nvm use $VERSION_NODE_17
+        - nvm install $VERSION_NODE_16
+        - nvm use $VERSION_NODE_16
         - node -v
+        - npm -v
         - npm i -g npm --latest
-        - npm i -g @aws-amplify/cli --latest --unsafe-perm=true
+        - npm i -g @aws-amplify/cli --force --unsafe-perm=true
         - npm list -g
     build:
       commands:
