@@ -4,10 +4,14 @@ backend:
     preBuild:
       commands:
         - ls -la .
-        - npm list -g
         - npm config get prefix
         - echo $PATH
-        - npm i -g @aws-amplify/cli --latest --unsafe-perm=true
+        - npm list -g
+        - node -v
+        - nvm install $VERSION_NODE_17 --reinstall-packages-from=current
+        - npm use $VERSION_NODE_17
+        - npm list -g
+        - node -v
     build:
       commands:
         - '# Execute Amplify CLI with the helper script'
