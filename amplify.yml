@@ -3,6 +3,9 @@ backend:
   phases:
     preBuild:
       commands:
+        - ls -la .
+        - npm config get prefix
+        - echo $PATH
         - amplify --version
         - npm i -g @aws-amplify/cli --latest --unsafe-perm=true
     build:
