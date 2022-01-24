@@ -7,7 +7,6 @@ backend:
         - npm config get prefix
         - echo $PATH
         - npm list -g
-        - node -v
         - nvm install $VERSION_NODE_17 --reinstall-packages-from=current
         - nvm use $VERSION_NODE_17
         - npm list -g
