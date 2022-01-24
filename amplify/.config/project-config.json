@@ -1,0 +1,17 @@
+{
+  "projectName": "amplifyshopifyoauth",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "frontend/src",
+      "DistributionDir": "frontend/.next",
+      "BuildCommand": "make frontend/build",
+      "StartCommand": "make frontnend/start"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}
