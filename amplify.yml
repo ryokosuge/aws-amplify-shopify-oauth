@@ -9,10 +9,10 @@ backend:
         - nvm install $VERSION_NODE_16
         - nvm use $VERSION_NODE_16
         - nvm alias default $VERSION_NODE_16
-        - export PATH="/root/.nvm/versions/node/${VERSION_NODE_DEFAULT}/bin:$PATH"
+        - export PATH="/root/.nvm/versions/node/$VERSION_NODE_DEFAULT/bin:$PATH"
         - node -v
         - npm -v
-        - sh -e "echo $PATH"
+        - sh -e "echo $$PATH"
         - npm i -g npm --latest
         - npm i -g @aws-amplify/cli --legacy-peer-deps --unsafe-perm=true
         - npm list -g
